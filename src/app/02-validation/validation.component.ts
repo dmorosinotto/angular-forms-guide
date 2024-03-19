@@ -39,7 +39,7 @@ import { UniqueUsernameValidatorDirective } from './unique-username.validator';
           #name="ngModel"
         />
         <div *ngIf="name.invalid && name.touched" class="help error">
-          <div *ngIf="name.errors?.required">Name is required</div>
+          <div *ngIf="name.errors?.['required']">Name is required</div>
         </div>
       </fieldset>
 
@@ -65,8 +65,8 @@ import { UniqueUsernameValidatorDirective } from './unique-username.validator';
           </div>
         </div>
         <div *ngIf="times.invalid && times.touched" class="help error">
-          <div *ngIf="times.errors?.requiredCheckboxGroup">
-            You must select {{ times.errors!.requiredCheckboxGroup }} items
+          <div *ngIf="times.errors?.['requiredCheckboxGroup']">
+            You must select {{ times.errors!['requiredCheckboxGroup'] }} items
           </div>
         </div>
       </fieldset>
@@ -95,7 +95,7 @@ import { UniqueUsernameValidatorDirective } from './unique-username.validator';
           *ngIf="passwordConfirmation.invalid && passwordConfirmation.touched"
           class="help error"
         >
-          <div *ngIf="passwordConfirmation.errors?.equalTo">
+          <div *ngIf="passwordConfirmation.errors?.['equalTo']">
             Password confirmation must be equal to password
           </div>
         </div>
@@ -116,7 +116,7 @@ import { UniqueUsernameValidatorDirective } from './unique-username.validator';
         />
         <div *ngIf="username.pending" class="help info">Pending</div>
         <div *ngIf="username.invalid && username.touched" class="help error">
-          <div *ngIf="username.errors?.usernameTaken">
+          <div *ngIf="username.errors?.['usernameTaken']">
             Username is already taken
           </div>
         </div>

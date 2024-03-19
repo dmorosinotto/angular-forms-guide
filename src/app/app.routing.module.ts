@@ -38,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '06-wizard',
+    redirectTo: '01-input-types',
   },
 ];
 

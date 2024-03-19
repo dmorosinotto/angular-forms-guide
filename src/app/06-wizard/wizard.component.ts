@@ -172,7 +172,7 @@ export class WizardComponent implements AfterViewInit, OnDestroy {
     .subscribe();
 
   ngAfterViewInit() {
-    requestAnimationFrame(() => this.init$.next());
+    requestAnimationFrame(() => this.init$.next(void 0));
   }
 
   ngOnDestroy() {
@@ -185,21 +185,19 @@ export class WizardComponent implements AfterViewInit, OnDestroy {
       .filter((helpType) =>
         this.model.details.every((detail) => detail.helpType.value !== helpType)
       )
-      .map(
-        (helptype): HelpDetails => {
-          console.log(
-            'create ',
-            this.helpTypes.find((t) => t.value === helptype)
-          );
-          return {
-            helpType: this.helpTypes.find((t) => t.value === helptype)!,
-            days: [],
-            notes: '',
-            minimumRequiredHours: null,
-            idealRequiredHours: null,
-          };
-        }
-      );
+      .map((helptype): HelpDetails => {
+        console.log(
+          'create ',
+          this.helpTypes.find((t) => t.value === helptype)
+        );
+        return {
+          helpType: this.helpTypes.find((t) => t.value === helptype)!,
+          days: [],
+          notes: '',
+          minimumRequiredHours: null,
+          idealRequiredHours: null,
+        };
+      });
 
     this.model.details = this.model.details
       .filter((detail) => this.model.helpTypes.includes(detail.helpType.value))
