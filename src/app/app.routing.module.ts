@@ -12,6 +12,11 @@ import { WizardComponent } from './06-wizard/wizard.component';
 
 const routes: Routes = [
   {
+    path: '00-wardbell',
+    loadChildren: () =>
+      import('./00-wardbell/ward.module').then((m) => m.WardModule),
+  },
+  {
     path: '01-input-types',
     component: InputTypesComponent,
   },
@@ -38,7 +43,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '01-input-types',
+    redirectTo: '00-wardbell',
   },
 ];
 
