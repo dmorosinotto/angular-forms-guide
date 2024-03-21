@@ -30,8 +30,8 @@ const routes: Routes = [
   },
   {
     path: '04-dynamic',
-    component: DynamicComponentGrouped,
-    // component: DynamicComponentFlat,
+    // component: DynamicComponentGrouped,
+    component: DynamicComponentFlat,
   },
   {
     path: '05-sub-form-components',
@@ -41,10 +41,10 @@ const routes: Routes = [
     path: '06-wizard',
     component: WizardComponent,
   },
-  {
-    path: '**',
-    redirectTo: '00-wardbell',
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: '00-wardbell',
+  // },
 ];
 
 @NgModule({

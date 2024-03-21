@@ -8,22 +8,35 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# CORSO - LINK UTILI
 
-## Build
+## BASI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Documentazione](https://angular.io/guide/forms-overview#setting-up-the-form-model) ufficiale AngularForms 👎
+- [Video](https://youtu.be/xYv9lsrV0s4?si=cbtJrYxA5DyjKlOT) Kara demo base confronto tra Form
+- - [Slides Kara](https://docs.google.com/presentation/d/1rufZvQabEwpinabiMRq1rAa5nWR3ZpsTvw4snePAsjM/preview) + [Repo Kara](https://github.com/kara/ac-forms) -> [Stackbliz](https://stackblitz.com/github/kara/ac-forms?file=src%2Fapp%2Fapp.component.html)
 
-## Running unit tests
+## INTERNALS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Video](https://youtu.be/CD_t3m2WMM8?si=Pi-xYdSFb906YFFr) Kara sui meccanismi interni (updateOn, CVA, NgControl/Container + project Form)
+- [Docs](https://angular.io/api/forms/AbstractControlDirective#subclasses) Vera struttura delle Direttive AbstractControlDirective (NgControl/ControlContainer) + [proprietà](https://angular.io/api/forms/AbstractControl) di AbsractControl (FormControl/FormGroup/FormArray)
+- [Articolo](https://angularindepth.com/posts/1055/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms) su Implementing ControlValueAccessor
 
-## Running end-to-end tests
+## TDF = Template Driven Forms
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Video](https://youtu.be/L7rGogdfe2Q?si=tHm8IK_z6eYA_m6t) WardBell su TDF + esempio [Stackbliz](http://stackblitz.com/edit/angular-kkatri)
+- [Guida](https://timdeschryver.dev/blog/a-practical-guide-to-angular-template-driven-forms) pratica a TemplateDrivenForm + Codice [validator universale](https://timdeschryver.dev/blog/a-generic-angular-template-driven-validator#revalidating-the-validator) TDF con funzione
+- [video](https://www.youtube.com/watch?v=7koRJKiBQGA) AngularNation su stesso argomento TDF + video su [validointi](https://youtu.be/ckxCgNE3SPI?si=KDj7y0DGhjmfpZsF) x TDF
 
-## Further help
+## RF = Reactive Forms
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Tutorial](https://this-is-angular.github.io/angular-guides/docs/fundamentals/forms-and-validation-in-angular-projects) Reactive Angular Forms
+- [Annuncio](https://blog.angular.io/angular-v14-is-now-available-391a6db736af#e02b) TypedReactiveForm rilascio NG14 + [documentazione](https://angular.io/guide/typed-forms) ufficiale
+
+## LIBRERIE E EXTRA
+
+- [Lib](https://github.com/ngneat/error-tailor) Gestione messaggi errore con
+- Vere Forms dinamiche (RF+config) con [ngx-formly](https://formly.dev/) + video [corso free](https://egghead.io/courses/configuration-based-reactive-angular-forms-with-ngx-formly-v5-16b2) by Juri su come usarla
+- [Corso](https://www.simplified.courses/complex-angular-template-driven-forms) Brecht advance-angular-form + stackblitz esempio [TDF+signal](https://stackblitz.com/~/github.com/simplifiedcourses/template-driven-forms) + validazione con [vest](https://vestjs.dev)
